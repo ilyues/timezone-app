@@ -28,6 +28,7 @@ const ModalExample = (prop) => {
         name: nameInput,
         iconURL: urlInput,
         timezone: location,
+        location: location,
       };
       prop.setNumProfiles(prop.numProfiles + 1);
       prop.setProfiles(curr);
@@ -81,6 +82,7 @@ const ModalExample = (prop) => {
           </p>
 
           <p>
+            <p>{location}</p>
             <DropdownMenu saveLocation={setLocation} />
           </p>
 

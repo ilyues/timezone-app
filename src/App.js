@@ -9,6 +9,8 @@ import React, { Profiler, useState } from "react";
 import "semantic-ui-css/semantic.min.css";
 
 function App() {
+  /* const [locs, addLocs] = React.useState([]);
+  addLocs(locs); */
   const dummyData = [
     {
       id: 1,
@@ -120,6 +122,7 @@ function App() {
           setProfiles={setAllProfiles}
           numProfiles={numProfiles}
           setNumProfiles={setNumProfiles}
+          // addLocation={addLocs}
         />
       </div>
       {timeGotten[0]}
@@ -130,7 +133,7 @@ function App() {
             teammateName={profile.name}
             teammateIcon={profile.iconURL}
             timezone={profile.timezone}
-            location="Bangkok"
+            location={profile.location}
             temp="77 F"
             time="7:09"
             amPm="am"
